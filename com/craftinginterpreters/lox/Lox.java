@@ -42,7 +42,10 @@ public class Lox {
         for (;;) {
             System.out.print("8==D ");
             String line = reader.readLine();
-            if (line == null) break;
+            if (line == null) {
+                System.out.println("");
+                break;
+            }
             run(line);
             hadError = false;   // If this flag wasn't here, the REPL would die 
                                 // at the first error. Suicide Linux, anyone?

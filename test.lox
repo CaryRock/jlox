@@ -1,1 +1,5 @@
 print "Hello";
+// Comment
+/* In-line comment */ print "Success"
+/* Multi-line
+    Comment */ print "Successful"

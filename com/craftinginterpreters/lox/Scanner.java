@@ -61,6 +61,10 @@ class Scanner {
                           // RN: A comment goes until the end of the line
                           while (peek() != '\n' && !isAtEnd()) advance();
                           // Here's how inline-comments are made, basically
+                      } else if (match('*')) {
+                          while (peek() != '*' && peekNext() != '/') advance();
+                          advance();    // Consume the '*' and '/' tokens
+                          advance();    // as well
                       } else {
                           addToken(SLASH);
                       }
